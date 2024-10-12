@@ -238,6 +238,13 @@ header, main, footer {
 #social{
     margin: 0 1rem;
     transition: transform 0.3s ease-in-out;
+    height: 30px;
+    width: 30px;
+    border: 2px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 50%;
+    overflow: visible;
 }
 
 #social:hover,
@@ -266,16 +273,6 @@ footer h1{
 
 footer .contact a {
     display: inline-block;
-}
-
-footer .contact img{
-    height: 30px;
-    width: 30px;
-    border: 2px;
-    background-color: white;
-    padding: 15px;
-    border-radius: 50%;
-    overflow: visible;
 }
 
 /* Responsive Design */
