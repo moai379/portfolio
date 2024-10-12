@@ -1,0 +1,369 @@
+/* General Styles */
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: url('/resources/background-image.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    overflow-x: hidden; /* Allow vertical scrolling if needed */
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+    padding: 0;
+    scrollbar-width: thin; /* Options: auto, thin */
+    scrollbar-color: #00b4db rgba(1, 8, 14, 0.2); /* thumb color, track color */
+}
+
+header, main, footer {
+    width: 100%;
+}
+
+
+/* Navigation Styles */
+.navigation{
+    position: sticky;
+    top: 1;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(1, 8, 14, 0.8);
+    padding: 10px 20px;
+    z-index: 2;
+}
+
+.menu{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.content{
+    margin: 0 2rem;
+    font-size: 1.2rem;
+    display: flex;
+}
+
+.content a{
+    margin: 0 1.5rem;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    transition: color 0.3s ease;
+    border-bottom: 5px solid transparent;
+}
+
+.content a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px; 
+    height: 3px;
+    width: 0;
+    background-color: #00FF00; 
+    transition: width 0.3s ease; 
+    border-radius: 2px; 
+}
+
+.content a:hover,
+.content a:focus {
+    color: #00FF00;
+    transition: 0.3s;
+    transition: color 0.3s ease;
+}
+
+.content a:hover::after,
+.content a:focus::after {
+    width: 100%; 
+}
+
+
+.content a:focus {
+    outline: 2px solid #00FF00;
+    outline-offset: 4px;
+}
+
+/* Part One Section */
+.part-one {
+    padding: 4rem 2rem;
+    text-align: left;
+}
+
+.about-heading {
+    margin-left: 10rem;
+    margin-bottom: 2rem;
+}
+
+.about-heading .static {
+    font-size: 2.5rem;
+    height: 4rem;
+}
+
+.about-heading .dynamic {
+    display: inline-block;
+    overflow: hidden;
+    border-right: 2px solid green;
+    white-space: nowrap;
+    animation: blink 1s step-end infinite;
+    color: green;
+    font-style: normal;
+    font-size: 2.5rem;
+    height: 4rem;
+}
+
+.about p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.about-img{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-img img{
+    height: 300px;
+    width: 300px;
+    margin-right: 10rem;
+    justify-content: flex-end, relative;
+    transition: 0.4s ease-in-out;
+}
+
+.about-img img:hover{
+    scale: 110%;
+    filter: drop-shadow(0 0 10px #00ffea);
+    transition: 0.3s ease-in-out;
+}
+
+.about-text{
+    display: flex;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    justify-content: flex-start, relative;
+    scale: 140%;
+    text-align: justify;
+}
+
+/* Tools Section */
+.tools{
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    padding: 2rem 0;
+    background-color: rgba(1, 8, 14, 0.7);
+    width: 80%;
+    margin-left: 145px;
+    margin-top: 30px;
+}
+
+.tools:before,
+.tools:after{
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background: linear-gradient(to left, transparent, #01080e);
+    content: "";
+    z-index: 1;
+}
+
+.tools:after{
+    right: 0;
+    background: linear-gradient(to right, transparent, #01080e);
+}
+
+.tools-icon{
+    display: flex;
+    height: 90px;
+    padding: 0;
+    animation: slide 17.5s linear infinite;
+    white-space: nowrap;
+    z-index: 0;
+}
+
+.tools-icon img{
+    margin: 0 4rem;
+    height: 80px;
+    width: 80px;
+    scale: 120%;
+    padding: 10px;
+    border: 2px solid green;
+    border-radius: 20%;
+    box-sizing: border-box;
+    background-color: #041826;
+    transition: 0.4s ease-in-out;
+}
+
+.tools-icon img:hover,
+.tools-icon img:focus {
+    transform: scale(1.2);
+    transition: 0.3s ease-in-out;
+    filter: drop-shadow(0 0 10px rgba(4, 212, 4, 0.7));
+}
+
+.tools:hover .tools-icon{
+    animation-play-state: paused;
+}
+
+
+
+/* Animations */
+@keyframes slide{
+    from{transform: translateX(0);}
+    to{transform: translateX(-100%);}
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+/* Contact Section */
+.contact {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+#social{
+    margin: 0 1rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+#social:hover,
+#social:focus {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px #00ffea);
+    transition: 0.3s ease-in-out;
+}
+
+#social:focus {
+    outline: 2px dashed #00FF00;
+    outline-offset: 4px;
+}
+
+/* Footer Styles */
+footer{
+    padding: 2rem 0;
+    background-color: rgba(1, 8, 14, 0.9);
+}
+
+footer h1{
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+footer .contact a {
+    display: inline-block;
+}
+
+footer .contact img{
+    height: 30px;
+    width: 30px;
+    border: 2px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 50%;
+    overflow: visible;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .content a{
+        margin: 0 1rem;
+        font-size: 1rem;
+    }
+
+    .tools-icon img{
+        margin: 0 1rem;
+        height: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navigation {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content a {
+        margin: 1rem 0;
+    }
+
+    .about-heading .static,
+    .about-heading .dynamic {
+        font-size: 2rem;
+    }
+
+    .about p {
+        font-size: 1rem;
+    }
+
+    .tools{
+        padding: 1rem 0;
+    }
+
+    .tools-icon{
+        animation: slide 30s linear infinite;
+    }
+}
+
+@media (max-width: 480px) {
+    .content a{
+        margin: 0.5rem 0;
+        font-size: 0.9rem;
+    }
+
+    .about-heading .static,
+    .about-heading .dynamic {
+        font-size: 1.5rem;
+    }
+
+    .about p {
+        font-size: 0.9rem;
+        padding: 0 1rem;
+    }
+
+    .tools-icon img{
+        margin: 0 0.5rem;
+        height: 40px;
+    }
+}
+
+/* WebKit Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 7px; /* Width of the vertical scrollbar */
+    height: 7px; /* Height of the horizontal scrollbar */
+    border-radius: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #00cfbe, #008a8a); /* Gradient with green tones */
+    border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #00ffea, #00bbbb); /* Hover effect for the thumb */
+    transition: 5s;
+}

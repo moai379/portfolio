@@ -6,23 +6,63 @@
     <meta name="keywords" content="portfolio, writing, html, web designing, career">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rajat Tyagi - Portfolio</title>
+    <link rel ="icon" href="resources/logo.png"> <!-- <a href="https://www.flaticon.com/free-icons/job" title="job icons">Job icons created by Yogi Aprelliyanto - Flaticon</a> -->
     <link rel="stylesheet" href="styles.css">
+    <link rel="script" href="script.js">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
-      <div class="navigation">
-        <h1 class="main-heading" style="font-family: "Oswald", sans-serif;">RAJAT TYAGI</h1>
-        <a href="renders.html">3D Renders</a>
-        <a href="writing.html">Content Writing</a>
-        <a href="websites.html">Websites</a>
-        <a href="contact.html">Contact</a>
-      </div>
+        <div class="navigation">
+            <h1 class="main-heading" style="font-family: Oswald, sans-serif;">RAJAT TYAGI</h1>
+            <div class="menu">
+              <div class="content">
+                <a href="renders.html">3D Renders</a>
+                <a href="writing.html">Content Writing</a>
+                <a href="websites.html">Websites</a>
+                <a href="contact.html">Contact</a>
+              </div>
+            </div>
+        </div>
     </header>
-    <main>
-      
-    </main>
+    <div class="part-one">
+        <section class="about">
+          <div class="about-img">
+            <div class="about-heading">
+                <h1 class="static" style="font-family: oswald, sans-serif;">Hello there! <br> I am <em style="color: green; font-style: unset;">Rajat Tyagi</em></h1>
+                <br>
+                <h1 class="dynamic" style="font-family: oswald, sans-serif; color: green; font-style: normal;"></h1>
+            </div>
+            <img src="resources/person-desk.png" usemap="#image-map">
+          </div>
+
+          <div class="about-text">
+            <p style="font-size: 21.3px;">I've always been fascinated by computers, driven by a curiosity to understand how they work. Over the years, I've taught myself <em style="color: green; font-style: unset;">video editing, 3D animation and programming languages,</em> with more advanced techniques learned through online course. My projects, have so far been personal ventures and hobbies but I'm now eager to monetize these skills and make a meaningful contribution to the online community.</p>
+          </div>
+        </section>
+        <h1 style="font-family: oswald, sans-serif; margin: 145px 0 0 145px; color: green;">Tools:</h1>
+        <section class="tools">
+            <div class="tools-icon">
+              <img src="resources/blender.png" alt="Blender 3D" title="Blender 3D">
+              <img src="resources/gimp.svg" alt="GIMP" title="GNU Image Manipulation Program">
+              <img src="resources/html5.svg" alt="HTML5" title="HTML5">
+              <img src="resources/css.svg" alt="CSS3" title="CSS3">
+              <img src="resources/javascript.png" alt="JavaScript" title="JavaScript">
+              <img src="resources/cpp.svg" alt="C++" title="C++">
+              <img src="resources/davinci.png" alt="DaVinci Resolve" title="DaVinci Resolve">
+            </div>           
+        </section>
+    </div>
+    <script src="script.js"></script>
   </body>
+  <footer>
+    <h1>Connect with me</h1>
+    <div class="contact">
+      <a href="https://www.linkedin.com/in/rajattyagi15/"><img src="resources/linkedin.png" alt="LinkedIn" title="LinkedIn" height="60px" id="social"></a>
+      <a href="https://github.com/rajattyagi15"><img src="resources/github.png" alt="GitHub" title="GitHub" height="60px" id="social"></a>
+      <a href="mailto:trajat24156@gmail.com"><img src="resources/mail.png" alt="Mail me" title="Mail me" height="60px" id="social"></a>
+    </div>
+  </footer>
 </html>
