@@ -1,0 +1,1 @@
+Made this portfolio website out of professional perspective. I know what the CSS styles do, but idk how it does so at many instances, if it works it works. Trial and error after all. Who cares as long as the code works and does not break anything :)
