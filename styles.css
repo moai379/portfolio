@@ -4,7 +4,7 @@ html{
 }
 
 body{
-    background: url('/resources/background-image.jpeg') no-repeat center center fixed;
+    background: url('resources/background-image.jpeg') no-repeat center center fixed;
     background-size: cover;
     overflow-x: hidden; /* Allow vertical scrolling if needed */
     color: white;
