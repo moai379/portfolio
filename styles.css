@@ -4,7 +4,7 @@ html{
 }
 
 body{
-    background: url('resources/background-image.jpeg') no-repeat center center fixed;
+    background: url('/resources/background-image.jpeg') no-repeat center center fixed;
     background-size: cover;
     overflow-x: hidden; /* Allow vertical scrolling if needed */
     color: white;
@@ -244,8 +244,7 @@ header, main, footer {
     background-color: white;
     padding: 15px;
     border-radius: 50%;
-    overflow-x: visible;
-    overflow-x: visible;
+    overflow: visible;
 }
 
 #social:hover,
@@ -276,6 +275,8 @@ footer .contact a {
     display: inline-block;
 }
 
+
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .content a{
@@ -290,9 +291,14 @@ footer .contact a {
 }
 
 @media (max-width: 768px) {
+    html, body{
+        overflow-x: hidden;
+    }
+
     .navigation {
         flex-direction: column;
         align-items: center;
+        margin-left: -5%;
     }
 
     .content {
@@ -302,23 +308,74 @@ footer .contact a {
 
     .content a {
         margin: 1rem 0;
+        padding-bottom: 1rem;
+        scale: 150%;
     }
 
-    .about-heading .static,
-    .about-heading .dynamic {
-        font-size: 2rem;
+    .about-heading .static{
+        font-size: 3rem;
+        display: inline-block;
+        margin-left: -50%;
+        scale: 120%;
+    }
+
+    .about-heading .dynamic{
+        display: inline;
+        margin-left: -59%;
+        scale: 120%;
     }
 
     .about p {
         font-size: 1rem;
+        scale: 150%;
+    }
+
+    .about-img {
+        position: relative;
+        display: block;
+        margin-left: 10%;
+    }
+
+    .about-text p{
+        scale: 80%;
+        margin-left: 0%;
     }
 
     .tools{
-        padding: 1rem 0;
+        padding: 1rem 0 0 0;
+        scale: 170%;
+        margin-left: 15%;
+        margin-bottom: -20%;
     }
 
     .tools-icon{
         animation: slide 30s linear infinite;
+    }
+    
+    .tools:hover .tools-icon{
+        animation-play-state: running;
+    }
+
+    .tools:before, .tools:after{
+        display: none;
+    }
+
+    .tools-title{
+        scale: 120%; 
+        margin-left: -40%;
+        margin-bottom: 15%;
+        text-align: left;
+    }
+
+    .tools-title h1{
+        margin-left: 0%;
+        margin-bottom: 5rem;
+    }
+
+    .tools-icon img{
+        margin: 0 2rem;
+        height: 40px;
+        width: 40px;
     }
 }
 
